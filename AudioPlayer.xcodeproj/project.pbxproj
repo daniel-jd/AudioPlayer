@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53E83E626F4D7A3007E43C1 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E83E526F4D7A3007E43C1 /* PlayerManager.swift */; };
+		A53E83ED26F4E245007E43C1 /* Ти благий.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83E926F4E242007E43C1 /* Ти благий.mp3 */; };
+		A53E83EE26F4E245007E43C1 /* Вірим ми.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83EA26F4E243007E43C1 /* Вірим ми.mp3 */; };
+		A53E83EF26F4E245007E43C1 /* Любовь Твоя верна.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83EB26F4E244007E43C1 /* Любовь Твоя верна.mp3 */; };
+		A53E83F026F4E245007E43C1 /* Мій шлях.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83EC26F4E245007E43C1 /* Мій шлях.mp3 */; };
+		A53E83F526F4E28C007E43C1 /* Бог кличе.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83F426F4E28C007E43C1 /* Бог кличе.mp3 */; };
 		A54AB65826F4C014003F484C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AB65726F4C014003F484C /* AppDelegate.swift */; };
 		A54AB65A26F4C015003F484C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AB65926F4C015003F484C /* SceneDelegate.swift */; };
 		A54AB65C26F4C015003F484C /* APViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AB65B26F4C015003F484C /* APViewController.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A53E83E526F4D7A3007E43C1 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		A53E83E926F4E242007E43C1 /* Ти благий.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ти благий.mp3"; sourceTree = "<group>"; };
+		A53E83EA26F4E243007E43C1 /* Вірим ми.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Вірим ми.mp3"; sourceTree = "<group>"; };
+		A53E83EB26F4E244007E43C1 /* Любовь Твоя верна.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Любовь Твоя верна.mp3"; sourceTree = "<group>"; };
+		A53E83EC26F4E245007E43C1 /* Мій шлях.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Мій шлях.mp3"; sourceTree = "<group>"; };
+		A53E83F426F4E28C007E43C1 /* Бог кличе.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Бог кличе.mp3"; sourceTree = "<group>"; };
 		A54AB65426F4C014003F484C /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54AB65726F4C014003F484C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A54AB65926F4C015003F484C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A53E83E826F4E21F007E43C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A53E83F226F4E24B007E43C1 /* MP3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A53E83F226F4E24B007E43C1 /* MP3 */ = {
+			isa = PBXGroup;
+			children = (
+				A53E83F426F4E28C007E43C1 /* Бог кличе.mp3 */,
+				A53E83EA26F4E243007E43C1 /* Вірим ми.mp3 */,
+				A53E83EB26F4E244007E43C1 /* Любовь Твоя верна.mp3 */,
+				A53E83EC26F4E245007E43C1 /* Мій шлях.mp3 */,
+				A53E83E926F4E242007E43C1 /* Ти благий.mp3 */,
+			);
+			path = MP3;
+			sourceTree = "<group>";
+		};
 		A54AB64B26F4C014003F484C = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +98,7 @@
 				A54AB66026F4C023003F484C /* Assets.xcassets */,
 				A54AB66226F4C023003F484C /* LaunchScreen.storyboard */,
 				A54AB66526F4C023003F484C /* Info.plist */,
+				A53E83E826F4E21F007E43C1 /* Resources */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -73,6 +106,7 @@
 		A54AB66E26F4D286003F484C /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				A53E83E526F4D7A3007E43C1 /* PlayerManager.swift */,
 				A54AB65B26F4C015003F484C /* APViewController.swift */,
 			);
 			path = Player;
@@ -143,9 +177,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53E83EE26F4E245007E43C1 /* Вірим ми.mp3 in Resources */,
+				A53E83F026F4E245007E43C1 /* Мій шлях.mp3 in Resources */,
 				A54AB66426F4C023003F484C /* LaunchScreen.storyboard in Resources */,
 				A54AB66126F4C023003F484C /* Assets.xcassets in Resources */,
 				A54AB65F26F4C015003F484C /* Main.storyboard in Resources */,
+				A53E83EF26F4E245007E43C1 /* Любовь Твоя верна.mp3 in Resources */,
+				A53E83F526F4E28C007E43C1 /* Бог кличе.mp3 in Resources */,
+				A53E83ED26F4E245007E43C1 /* Ти благий.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53E83E626F4D7A3007E43C1 /* PlayerManager.swift in Sources */,
 				A54AB65C26F4C015003F484C /* APViewController.swift in Sources */,
 				A54AB67026F4D2AB003F484C /* SongsListViewController.swift in Sources */,
 				A54AB65826F4C014003F484C /* AppDelegate.swift in Sources */,

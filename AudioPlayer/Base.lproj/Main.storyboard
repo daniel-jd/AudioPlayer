@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boH-HA-5WF">
-                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="782" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="YOd-Bx-Nvk"/>
@@ -28,15 +28,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="playerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5zj-MO-Qve"/>
                                     <segue destination="B4v-jl-pap" kind="show" identifier="toPlayerVC" id="nuo-Gr-OKk"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BjK-zU-Iwj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="738"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" id="XeP-pO-hOU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongCell" id="XeP-pO-hOU">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XeP-pO-hOU" id="hi5-5K-se6">
@@ -58,9 +59,12 @@
                             <constraint firstItem="boH-HA-5WF" firstAttribute="top" secondItem="BjK-zU-Iwj" secondAttribute="bottom" id="JgJ-LN-lQg"/>
                             <constraint firstItem="BjK-zU-Iwj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TdE-Xv-So7"/>
                             <constraint firstItem="boH-HA-5WF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="olq-nT-VcQ"/>
-                            <constraint firstItem="boH-HA-5WF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yIZ-kf-dzG"/>
+                            <constraint firstItem="boH-HA-5WF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="yIZ-kf-dzG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="BjK-zU-Iwj" id="7jp-iW-NLK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +73,7 @@
         <!--View Controller-->
         <scene sceneID="QUe-hf-9Sa">
             <objects>
-                <viewController storyboardIdentifier="APViewController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B4v-jl-pap" customClass="APViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="APViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B4v-jl-pap" customClass="APViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vfL-Ms-lPe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,11 +125,11 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="h1p-ef-70Y">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="h1p-ef-70Y">
                                 <rect key="frame" x="40" y="696" width="334" height="26"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mp6-5D-3OZ">
-                                        <rect key="frame" x="0.0" y="2.5" width="19.5" height="21"/>
+                                        <rect key="frame" x="0.0" y="2.5" width="20" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="zVt-hU-Rw2"/>
                                         </constraints>
@@ -133,7 +137,7 @@
                                         <state key="normal" backgroundImage="speaker.wave.1.fill" catalog="system"/>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="UUL-xL-s7z">
-                                        <rect key="frame" x="22.5" y="4" width="281.5" height="19"/>
+                                        <rect key="frame" x="23" y="4" width="280.5" height="19"/>
                                         <color key="tintColor" systemColor="systemPurpleColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="Twm-bx-dWa"/>
@@ -143,7 +147,7 @@
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1Z-su-Kop">
-                                        <rect key="frame" x="307" y="0.5" width="27" height="24.5"/>
+                                        <rect key="frame" x="306.5" y="0.5" width="27.5" height="24.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="lux-vp-Htq"/>
                                         </constraints>
@@ -152,7 +156,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Ud-KK-ghX">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3Ud-KK-ghX">
                                 <rect key="frame" x="38" y="364" width="338" height="25.5"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <connections>

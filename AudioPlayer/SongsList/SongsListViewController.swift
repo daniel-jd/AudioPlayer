@@ -9,21 +9,42 @@ import UIKit
 
 class SongsListViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
+    let songsList = [
+        Bundle.main.url(forResource: "Бог кличе", withExtension: "mp3")!,
+        Bundle.main.url(forResource: "Вірим ми", withExtension: "mp3")!,
+        Bundle.main.url(forResource: "Мій шлях", withExtension: "mp3")!,
+        Bundle.main.url(forResource: "Любовь Твоя верна", withExtension: "mp3")!,
+        Bundle.main.url(forResource: "Ти благий", withExtension: "mp3")!
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+     
     }
-    
 
-    /*
-    // MARK: - Navigation
+    @IBAction func playerButtonPressed(_ sender: Any) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+}
+
+// MARK: - Delegate & Data Source
+
+extension SongsListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        songsList.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell")!
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.text = songsList[indexPath.row].description
+        return cell
+    }
+
 
 }

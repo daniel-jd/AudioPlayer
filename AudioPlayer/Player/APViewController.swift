@@ -16,10 +16,12 @@ class APViewController: UIViewController {
     @IBOutlet weak var songSlider: UISlider!
     @IBOutlet weak var volumeSlider: UISlider!
 
+    private var player: PlayerManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        player = PlayerManager.shared
     }
 
 
