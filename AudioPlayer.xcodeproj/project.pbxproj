@@ -13,6 +13,9 @@
 		A53E83EF26F4E245007E43C1 /* Любовь Твоя верна.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83EB26F4E244007E43C1 /* Любовь Твоя верна.mp3 */; };
 		A53E83F026F4E245007E43C1 /* Мій шлях.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83EC26F4E245007E43C1 /* Мій шлях.mp3 */; };
 		A53E83F526F4E28C007E43C1 /* Бог кличе.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83F426F4E28C007E43C1 /* Бог кличе.mp3 */; };
+		A53E83FB26F5287E007E43C1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E83FA26F5287E007E43C1 /* Player.swift */; };
+		A53E83FE26F5292B007E43C1 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E83FD26F5292B007E43C1 /* Song.swift */; };
+		A53E840226F5299A007E43C1 /* SongStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E840126F5299A007E43C1 /* SongStack.swift */; };
 		A54AB65826F4C014003F484C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AB65726F4C014003F484C /* AppDelegate.swift */; };
 		A54AB65A26F4C015003F484C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AB65926F4C015003F484C /* SceneDelegate.swift */; };
 		A54AB65C26F4C015003F484C /* APViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AB65B26F4C015003F484C /* APViewController.swift */; };
@@ -29,6 +32,9 @@
 		A53E83EB26F4E244007E43C1 /* Любовь Твоя верна.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Любовь Твоя верна.mp3"; sourceTree = "<group>"; };
 		A53E83EC26F4E245007E43C1 /* Мій шлях.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Мій шлях.mp3"; sourceTree = "<group>"; };
 		A53E83F426F4E28C007E43C1 /* Бог кличе.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Бог кличе.mp3"; sourceTree = "<group>"; };
+		A53E83FA26F5287E007E43C1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A53E83FD26F5292B007E43C1 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		A53E840126F5299A007E43C1 /* SongStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStack.swift; sourceTree = "<group>"; };
 		A54AB65426F4C014003F484C /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54AB65726F4C014003F484C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A54AB65926F4C015003F484C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +77,17 @@
 			path = MP3;
 			sourceTree = "<group>";
 		};
+		A53E840026F52935007E43C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A53E83FA26F5287E007E43C1 /* Player.swift */,
+				A53E83E526F4D7A3007E43C1 /* PlayerManager.swift */,
+				A53E83FD26F5292B007E43C1 /* Song.swift */,
+				A53E840126F5299A007E43C1 /* SongStack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A54AB64B26F4C014003F484C = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +109,7 @@
 			children = (
 				A54AB65726F4C014003F484C /* AppDelegate.swift */,
 				A54AB65926F4C015003F484C /* SceneDelegate.swift */,
+				A53E840026F52935007E43C1 /* Model */,
 				A54AB67226F4D2B2003F484C /* SongsList */,
 				A54AB66E26F4D286003F484C /* Player */,
 				A54AB65D26F4C015003F484C /* Main.storyboard */,
@@ -106,7 +124,6 @@
 		A54AB66E26F4D286003F484C /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				A53E83E526F4D7A3007E43C1 /* PlayerManager.swift */,
 				A54AB65B26F4C015003F484C /* APViewController.swift */,
 			);
 			path = Player;
@@ -195,11 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53E83FE26F5292B007E43C1 /* Song.swift in Sources */,
 				A53E83E626F4D7A3007E43C1 /* PlayerManager.swift in Sources */,
 				A54AB65C26F4C015003F484C /* APViewController.swift in Sources */,
 				A54AB67026F4D2AB003F484C /* SongsListViewController.swift in Sources */,
 				A54AB65826F4C014003F484C /* AppDelegate.swift in Sources */,
+				A53E83FB26F5287E007E43C1 /* Player.swift in Sources */,
 				A54AB65A26F4C015003F484C /* SceneDelegate.swift in Sources */,
+				A53E840226F5299A007E43C1 /* SongStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

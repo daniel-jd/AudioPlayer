@@ -15,6 +15,18 @@ class APViewController: UIViewController {
     @IBOutlet weak var songDurationLabel: UILabel!
     @IBOutlet weak var songSlider: UISlider!
     @IBOutlet weak var volumeSlider: UISlider!
+    @IBOutlet weak var playPauseButton: UIButton!
+    
+    private var isPlaying = false {
+        didSet {
+            switch isPlaying {
+            case true:
+                playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
+            case false:
+                playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
+            }
+        }
+    }
 
     private var player: PlayerManager?
 
@@ -30,6 +42,7 @@ class APViewController: UIViewController {
     }
     
     @IBAction func playButtonPressed(_ sender: Any) {
+        isPlaying = !isPlaying
     }
 
     @IBAction func forwardButtonPressed(_ sender: Any) {

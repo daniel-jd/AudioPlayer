@@ -175,14 +175,14 @@
                                 <color key="textColor" red="0.8671339897" green="0.8671339897" blue="0.8671339897" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-7K-SII">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-7K-SII">
                                 <rect key="frame" x="0.0" y="124" width="414" height="220"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="O0z-zt-jjS"/>
                                     <constraint firstAttribute="width" constant="414" id="iCq-rq-bZM"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Daz-FD-LNF">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Daz-FD-LNF">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -190,7 +190,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wyw-pn-KGN">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="46" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TVC-nY-M2S">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -259,6 +259,7 @@
                     <navigationItem key="navigationItem" id="70x-Jn-Npj"/>
                     <connections>
                         <outlet property="artistLabel" destination="Ghh-Hz-ezQ" id="5mo-BI-gjU"/>
+                        <outlet property="playPauseButton" destination="fhM-vA-1XC" id="iMy-Es-eER"/>
                         <outlet property="songDurationLabel" destination="UEn-wg-3IL" id="Bsz-9h-kca"/>
                         <outlet property="songSlider" destination="3Ud-KK-ghX" id="JTC-H0-FiG"/>
                         <outlet property="songTitleLabel" destination="6S0-8N-wLT" id="Fje-h1-eGf"/>
