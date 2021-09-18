@@ -10,6 +10,9 @@ import Foundation
 struct SongStack<T> {
     private var stack = Array<T>()
     private let _maxSize: Int
+    var count: Int {
+        return stack.count
+    }
 
     public init(maxSize: Int){
         self._maxSize = maxSize
@@ -20,8 +23,11 @@ struct SongStack<T> {
     }
 
     public func getElement(by index: Int) -> T {
-        guard index < stack.count && index >= 0 else { fatalError() }
-        return stack[index]
+        if index < stack.count && index >= 0 {
+            return stack[index]
+        } else {
+            fatalError("Error getting index")
+        }
     }
 
     public func isFull() -> Bool {

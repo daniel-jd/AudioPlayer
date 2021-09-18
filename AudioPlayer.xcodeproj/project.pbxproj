@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A53E83E626F4D7A3007E43C1 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E83E526F4D7A3007E43C1 /* PlayerManager.swift */; };
-		A53E83ED26F4E245007E43C1 /* Ти благий.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83E926F4E242007E43C1 /* Ти благий.mp3 */; };
-		A53E83EE26F4E245007E43C1 /* Вірим ми.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83EA26F4E243007E43C1 /* Вірим ми.mp3 */; };
-		A53E83EF26F4E245007E43C1 /* Любовь Твоя верна.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83EB26F4E244007E43C1 /* Любовь Твоя верна.mp3 */; };
-		A53E83F026F4E245007E43C1 /* Мій шлях.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83EC26F4E245007E43C1 /* Мій шлях.mp3 */; };
-		A53E83F526F4E28C007E43C1 /* Бог кличе.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A53E83F426F4E28C007E43C1 /* Бог кличе.mp3 */; };
 		A53E83FB26F5287E007E43C1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E83FA26F5287E007E43C1 /* Player.swift */; };
 		A53E83FE26F5292B007E43C1 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E83FD26F5292B007E43C1 /* Song.swift */; };
 		A53E840226F5299A007E43C1 /* SongStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E840126F5299A007E43C1 /* SongStack.swift */; };
@@ -23,15 +18,12 @@
 		A54AB66126F4C023003F484C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A54AB66026F4C023003F484C /* Assets.xcassets */; };
 		A54AB66426F4C023003F484C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54AB66226F4C023003F484C /* LaunchScreen.storyboard */; };
 		A54AB67026F4D2AB003F484C /* SongsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AB66F26F4D2AB003F484C /* SongsListViewController.swift */; };
+		A54B887B26F65C8400ACAD48 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54B887926F65C8400ACAD48 /* CollectionViewCell.swift */; };
+		A54B887C26F65C8400ACAD48 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54B887A26F65C8400ACAD48 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A53E83E526F4D7A3007E43C1 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
-		A53E83E926F4E242007E43C1 /* Ти благий.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ти благий.mp3"; sourceTree = "<group>"; };
-		A53E83EA26F4E243007E43C1 /* Вірим ми.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Вірим ми.mp3"; sourceTree = "<group>"; };
-		A53E83EB26F4E244007E43C1 /* Любовь Твоя верна.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Любовь Твоя верна.mp3"; sourceTree = "<group>"; };
-		A53E83EC26F4E245007E43C1 /* Мій шлях.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Мій шлях.mp3"; sourceTree = "<group>"; };
-		A53E83F426F4E28C007E43C1 /* Бог кличе.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Бог кличе.mp3"; sourceTree = "<group>"; };
 		A53E83FA26F5287E007E43C1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A53E83FD26F5292B007E43C1 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		A53E840126F5299A007E43C1 /* SongStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStack.swift; sourceTree = "<group>"; };
@@ -44,6 +36,8 @@
 		A54AB66326F4C023003F484C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A54AB66526F4C023003F484C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A54AB66F26F4D2AB003F484C /* SongsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsListViewController.swift; sourceTree = "<group>"; };
+		A54B887926F65C8400ACAD48 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A54B887A26F65C8400ACAD48 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,26 +51,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A53E83E826F4E21F007E43C1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A53E83F226F4E24B007E43C1 /* MP3 */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		A53E83F226F4E24B007E43C1 /* MP3 */ = {
-			isa = PBXGroup;
-			children = (
-				A53E83F426F4E28C007E43C1 /* Бог кличе.mp3 */,
-				A53E83EA26F4E243007E43C1 /* Вірим ми.mp3 */,
-				A53E83EB26F4E244007E43C1 /* Любовь Твоя верна.mp3 */,
-				A53E83EC26F4E245007E43C1 /* Мій шлях.mp3 */,
-				A53E83E926F4E242007E43C1 /* Ти благий.mp3 */,
-			);
-			path = MP3;
-			sourceTree = "<group>";
-		};
 		A53E840026F52935007E43C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +90,6 @@
 				A54AB66026F4C023003F484C /* Assets.xcassets */,
 				A54AB66226F4C023003F484C /* LaunchScreen.storyboard */,
 				A54AB66526F4C023003F484C /* Info.plist */,
-				A53E83E826F4E21F007E43C1 /* Resources */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -125,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				A54AB65B26F4C015003F484C /* APViewController.swift */,
+				A54B887926F65C8400ACAD48 /* CollectionViewCell.swift */,
+				A54B887A26F65C8400ACAD48 /* CollectionViewCell.xib */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -194,14 +169,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A53E83EE26F4E245007E43C1 /* Вірим ми.mp3 in Resources */,
-				A53E83F026F4E245007E43C1 /* Мій шлях.mp3 in Resources */,
 				A54AB66426F4C023003F484C /* LaunchScreen.storyboard in Resources */,
 				A54AB66126F4C023003F484C /* Assets.xcassets in Resources */,
 				A54AB65F26F4C015003F484C /* Main.storyboard in Resources */,
-				A53E83EF26F4E245007E43C1 /* Любовь Твоя верна.mp3 in Resources */,
-				A53E83F526F4E28C007E43C1 /* Бог кличе.mp3 in Resources */,
-				A53E83ED26F4E245007E43C1 /* Ти благий.mp3 in Resources */,
+				A54B887C26F65C8400ACAD48 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +185,7 @@
 			files = (
 				A53E83FE26F5292B007E43C1 /* Song.swift in Sources */,
 				A53E83E626F4D7A3007E43C1 /* PlayerManager.swift in Sources */,
+				A54B887B26F65C8400ACAD48 /* CollectionViewCell.swift in Sources */,
 				A54AB65C26F4C015003F484C /* APViewController.swift in Sources */,
 				A54AB67026F4D2AB003F484C /* SongsListViewController.swift in Sources */,
 				A54AB65826F4C014003F484C /* AppDelegate.swift in Sources */,

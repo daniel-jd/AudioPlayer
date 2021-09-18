@@ -8,7 +8,7 @@
 import Foundation
 
 struct Song {
-    let url: URL
     let title: String
-    let artist: String?
+    let url: URL
+    var isSelected: Bool = false
 }

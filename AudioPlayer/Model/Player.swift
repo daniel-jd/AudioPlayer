@@ -5,16 +5,23 @@
 //  Created by Daniel Yamrak on 17.09.2021.
 //
 
-//import Foundation
+import Foundation
 import AVFoundation
 import AudioToolbox
 
 final class Player {
 
     static let shared = Player()
-    private var player: AVPlayer?
+
+    private var player: AVAudioPlayer?
     private var status = PlayerStatus.failed
     var onSongFinished: (()->Void)?
+    var currentTime: Double {
+        return player?.currentTime ?? 0.0
+    }
+    var duration: Double {
+        return player?.duration ?? 0.0
+    }
 
     enum PlayerStatus {
         case isReadyToPlay
@@ -30,23 +37,19 @@ final class Player {
         )
     }
 
-    // MARK: Player API
+// MARK: Player API
     func getPlayerStatus() -> PlayerStatus {
         return status
     }
 
-    func test(test: String, handler: @escaping (()->Void)) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            handler()
-        }
-    }
-
     func prepareToPlay(_ song: Song) {
         do {
-            try AVAudioSession.sharedInstance().setCategory(.playAndRecord)
             try AVAudioSession.sharedInstance().setActive(true)
-
-            player = AVPlayer(url: song.url)
+            do {
+            player = try AVAudioPlayer(contentsOf: song.url)
+            } catch {
+                fatalError("Error creating player instance \(error.localizedDescription)")
+            }
             status = .isReadyToPlay
 
         } catch {
@@ -59,14 +62,15 @@ final class Player {
         player.play()
     }
 
-    func play(start second: Double) {
-        guard let player = player else { return }
-        player.seek(to: CMTimeMakeWithSeconds(second, preferredTimescale: 1000))
-        player.play()
-    }
+//    func play(start second: Double) {
+//        guard let player = player else { return }
+//        player.seek(to: CMTimeMakeWithSeconds(second, preferredTimescale: 1000))
+//        player.play()
+//    }
 
     func pause() {
-        player?.pause()
+        guard let player = player else { return }
+        player.pause()
     }
 
     @objc func fileComplete() {
