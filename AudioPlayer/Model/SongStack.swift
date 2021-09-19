@@ -30,6 +30,12 @@ struct SongStack<T> {
         }
     }
 
+    public func last() -> T? {
+        if !stack.isEmpty {
+            return stack[stack.count - 1]
+        } else { return nil }
+    }
+
     public func isFull() -> Bool {
         stack.count == _maxSize
     }
@@ -55,7 +61,7 @@ struct SongStack<T> {
         return v
     }
 
-    public func getAllStack () -> Array<T> {
+    public func getAllStack() -> Array<T> {
         return self.stack
     }
 

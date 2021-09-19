@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Song {
+struct Song: Equatable {
     let title: String
     let url: URL
     var isSelected: Bool = false

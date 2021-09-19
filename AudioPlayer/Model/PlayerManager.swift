@@ -14,12 +14,17 @@ class PlayerManager {
 
     private let player = Player.shared
     private(set) var playlist = SongStack<Song>(maxSize: 50)
-    private var index = 0
+    private(set) var index = 0
     var currentSong: Song? {
         return playlist.getElement(by: index)
     }
     var currentTime: Double {
-        return player.currentTime
+        get {
+            return player.currentTime
+        }
+        set {
+            player.currentTime = newValue
+        }
     }
     var duration: Double {
         return player.duration
@@ -89,16 +94,39 @@ class PlayerManager {
         playSong()
     }
 
+    func play(atTime time: TimeInterval) {
+        player.playAt(time)
+    }
+
     func pauseSong() {
         player.pause()
     }
 
     func playNextSong() {
+        player.stop()
+        if currentSong != playlist.last() {
+            let i = index + 1
+            setCurrentSongIndex(i)
+            player.prepareToPlay(playlist.getElement(by: i))
+            playSong()
+        } else {
+            return
+        }
 
     }
 
     func playPrevSong() {
+        player.stop()
+        if index != 0 {
+            let i = index - 1
+            setCurrentSongIndex(i)
+            player.prepareToPlay(playlist.getElement(by: i))
+            playSong()
+        } else {
+            return
+        }
 
+        
     }
 
 }

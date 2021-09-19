@@ -17,7 +17,14 @@ final class Player {
     private var status = PlayerStatus.failed
     var onSongFinished: (()->Void)?
     var currentTime: Double {
-        return player?.currentTime ?? 0.0
+        get {
+            guard let player = player else { return 0.0 }
+            return player.currentTime
+        }
+        set {
+            guard let player = player else { return }
+            player.currentTime = newValue
+        }
     }
     var duration: Double {
         return player?.duration ?? 0.0
@@ -60,6 +67,16 @@ final class Player {
     func play() {
         guard let player = player else { return }
         player.play()
+    }
+
+    func playAt(_ time: TimeInterval) {
+        guard let player = player else { return }
+        player.play(atTime: time)
+    }
+
+    func stop() {
+        guard let player = player else { return }
+        player.stop()
     }
 
 //    func play(start second: Double) {
