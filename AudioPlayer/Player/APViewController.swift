@@ -19,7 +19,7 @@ class APViewController: UIViewController {
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var timeFromStartLabel: UILabel! {
         didSet {
-            timeFromStartLabel.text = String(format: "%.2f", pm.currentTime / 60)
+            timeFromStartLabel.text = "0:00"
         }
     }
     @IBOutlet weak var songDurationLabel: UILabel!
@@ -63,7 +63,7 @@ class APViewController: UIViewController {
         pm.playPlaylist()
         isPlaying = true
         songSlider.maximumValue = Float(pm.duration / 60)
-        songDurationLabel.text = "\(String(format: "%.2f", pm.duration / 60))"
+        songDurationLabel.text = formatted(time: pm.duration)
 
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateLabel),
                                      userInfo: nil, repeats: true)
@@ -72,7 +72,7 @@ class APViewController: UIViewController {
 
     @objc func updateLabel() {
         songSlider.setValue(Float(pm.currentTime)/60, animated: true)
-        timeFromStartLabel.text = String(format: "%.2f", songSlider.value)
+        timeFromStartLabel.text = formatted(time: pm.currentTime)
     }
 
     private func registerCollectionViewCell() {
@@ -82,10 +82,33 @@ class APViewController: UIViewController {
     private func updateUILabelsWith(_ currentSong: Song) {
         songTitleLabel.text = "Almaz Worship"
         artistLabel.text = pm.currentSong?.title
-        songDurationLabel.text = "\(String(format: "%.2f", pm.duration / 60))"
+        songDurationLabel.text = formatted(time: pm.duration)
         timeFromStartLabel.text = "0:00"
         songSlider.setValue(0.00, animated: true)
         songSlider.maximumValue = Float(pm.duration / 60)
+    }
+
+    private func formatted(time: Double) -> String {
+        var seconds = Int(ceil(time))
+        var hours = 0
+        var mins = 0
+
+        if seconds > 3600 {
+            hours = seconds / 3600
+            seconds -= hours * 3600
+        }
+
+        if seconds > 60 {
+            mins = seconds / 60
+            seconds -= mins * 60
+        }
+
+        var formattedString = ""
+        if hours > 0 {
+            formattedString = "\(String(format: "%02d", hours)):"
+        }
+        formattedString += "\(String(format: "%02d", mins)):\(String(format: "%02d", seconds))"
+        return formattedString
     }
 
     @IBAction func menuButtonPressed(_ sender: Any) {
